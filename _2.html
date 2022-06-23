@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>등속 운동</title>
+    <style>
+        span:nth-child(1) {
+            background-color: rgb(53, 149, 250);
+            left: 1%;
+            top: 1%;
+            position: absolute;          
+            transform: translate(0, 50px);
+            padding: 50px;
+            border-radius: 50px;
+            display: inline-block;
+            transition-duration: 5000ms;
+            transition-timing-function: linear;
+            transition-property: transform, top, left;
+        }
+        div > div > span.sy:nth-child(1) {
+            background-color: rgb(254, 50, 27);
+            left: 1%;
+            top: 1%;
+            position: absolute;
+            transform: translate(300%, 150%);
+            padding: 50px;
+            display: inline-block;
+            border-radius: 50px;
+            transition-duration: 3000ms;
+            transition-timing-function: linear;
+        }
+        div > div > span.sy:nth-child(2) {
+            background-color: rgb(52, 200, 51);
+            left: 1%;
+            top: 1%;
+            position: absolute;
+            transform: translate(300%, 280%);
+            padding: 50px;
+            transform-origin: top left;
+            display: inline-block;
+            border-radius: 50px;
+            transition-duration: 3000ms;
+            transition-timing-function: linear;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+
+        button:nth-child(1):hover ~ div > span.mh {
+            background-color: blueviolet;
+        }
+        
+        button:nth-child(2):hover ~ div > span.mh {
+            background-color: blueviolet;
+        }
+        button:nth-child(3):hover ~ div > span.mh {
+            background-color: blueviolet;
+        }
+
+        button {
+            font-size: 15px;
+            color: white;
+            border-radius: 10px;
+            margin-right: 5px;
+            padding: 8px;
+            border: none;
+            background-color: rgb(60, 60, 60);
+
+        }
+
+        div > div {
+            position: absolute;
+            display: inline-block;
+            padding: 325px;
+            border-radius: 50%;
+            transition-duration: 3s;
+            transition-timing-function: linear;
+
+        }
+
+        button:active {
+            background-color: black;
+        }
+
+        button:nth-child(1):active ~ div > span.mh {
+            left: 99%;
+            transform: translate(-100px, 55px);
+        }
+
+        button:nth-child(2):active ~ div > span.mh {
+            top: 99%;
+            transform: translate(0, -100px);
+        }
+
+        button:nth-child(3):active ~ div > span.mh {
+            left: 99%;
+            top: 99%;
+            transform: translate(-100px, -100px);
+        }
+
+        button:nth-child(4):active ~ div > div {
+            transform: rotate(180deg);
+        }
+
+
+    
+    </style>
+</head>
+<body>
+    <body>
+        <button>가로로 움직이기</button>
+        <button>세로로 움직이기</button>
+        <button>두방향 움직이기</button>
+        <button name="circle">원 돌리기(최대 한 바퀴)</button>
+        <div>
+            <span class="mh"></span>
+            <div>
+                <span class="sy"></span>
+                <span class="sy"></span>
+            </div>
+        </div>
+    </body>
+</body>
+</html>
